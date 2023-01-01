@@ -5,8 +5,19 @@ from shutil import copy2 as copy
 from subprocess import run
 
 root_dir = "katas/"
+re_exclude = re.compile(r"/([._])|(solution)")
+
+files = list(
+    filter(
+        lambda pth: not re_exclude.search(pth.as_posix()),
+        Path(root_dir).glob("**/*"),
+    )
+)
+for f in files:
+    print(f)
+exit()
 notebook_glob = "**/solutions/**/*.*"
-re_exclude = re.compile(r"/\.")
+re_exclude = re.compile(r"/[._]")
 files = list(
     filter(
         lambda pth: not re_exclude.search(pth.as_posix()),
