@@ -5,20 +5,22 @@ from shutil import copy2 as copy
 from subprocess import run
 
 root_dir = "katas/"
-re_exclude = re.compile(r"/([._])|(solution)")
+re_exclude = re.compile(r"/([._])|(solution)|(lib)")
 
-files = list(
+files_to_delete = list(
     filter(
         lambda pth: not re_exclude.search(pth.as_posix()),
-        Path(root_dir).glob("**/*"),
+        Path(root_dir).glob("**/*.*"),
     )
 )
-for f in files:
-    print(f)
-exit()
+for f in files_to_delete:
+    print(f"Deleting {f.as_posix()}...")
+    f.unlink()
+
+
 notebook_glob = "**/solutions/**/*.*"
 re_exclude = re.compile(r"/[._]")
-files = list(
+files_to_copy = list(
     filter(
         lambda pth: not re_exclude.search(pth.as_posix()),
         Path(root_dir).glob(notebook_glob),
@@ -26,7 +28,7 @@ files = list(
 )
 
 re_dest = re.compile(r"/solutions")
-for file in files:
+for file in files_to_copy:
     source = file.as_posix()
     dest = re_dest.sub("", source)
     if file.suffix == ".ipynb":
