@@ -49,7 +49,7 @@ for file in files_to_copy:
             json.dump(src_notebook, fp)
 
         try:
-            run(["jupyter", "nbconvert", "--execute", "--to", "notebook", "--inplace", dest], text=True, capture_output=True)
+            output = run(["jupyter", "nbconvert", "--execute", "--to", "notebook", "--inplace", dest], text=True, capture_output=True)
             print(output.stdout)
         except BaseException as e:
             print(e)
