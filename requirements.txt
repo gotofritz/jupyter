@@ -1,4 +1,5 @@
 beautifulsoup4==4.11.1
+codetiming==1.4.0
 html5lib==1.1.0
 httpx==1.0.0b0
 jupyter==1.0.0
