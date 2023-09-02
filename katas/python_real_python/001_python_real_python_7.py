@@ -13,8 +13,7 @@ def cpu_bound(number):
 
 
 def find_sums(numbers):
-    with multiprocessing.Pool() as pool:
-        pool.map(cpu_bound, numbers)
+    ...
 
 
 3
