@@ -1,5 +1,3 @@
-import requests
-import multiprocessing
 import time
 
 sites = [
@@ -9,6 +7,7 @@ sites = [
 
 
 1
+session = None
 
 
 def set_global_session():

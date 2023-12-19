@@ -1,4 +1,3 @@
-import multiprocessing
 import time
 
 
@@ -19,7 +18,7 @@ def find_sums(numbers):
 3
 if __name__ == "__main__":
     numbers = [5_000_000 + x for x in range(20)]
-    start_time = time.time()
+    start_time = time.perf_counter()
     find_sums(numbers)
-    duration = time.time() - start_time
+    duration = time.perf_counter() - start_time
     print(f"Duration {duration} seconds")
