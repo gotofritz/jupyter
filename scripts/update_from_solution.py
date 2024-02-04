@@ -19,7 +19,7 @@ for f in files_to_delete:
 
 
 notebook_glob = "**/solutions/**/*.*"
-re_exclude = re.compile(r"/[._]")
+re_exclude = re.compile(r"/\.|__")
 files_to_copy = list(
     filter(
         lambda pth: not re_exclude.search(pth.as_posix()),
@@ -49,7 +49,19 @@ for file in files_to_copy:
             json.dump(src_notebook, fp)
 
         try:
-            output = run(["jupyter", "nbconvert", "--execute", "--to", "notebook", "--inplace", dest], text=True, capture_output=True)
+            output = run(
+                [
+                    "jupyter",
+                    "nbconvert",
+                    "--execute",
+                    "--to",
+                    "notebook",
+                    "--inplace",
+                    dest,
+                ],
+                text=True,
+                capture_output=True,
+            )
             print(output.stdout)
         except BaseException as e:
             print(e)
