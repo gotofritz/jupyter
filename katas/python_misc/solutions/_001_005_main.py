@@ -79,7 +79,7 @@
 #         message_win = ... 3.1
 #         key_thread = threading.Thread(
 #             target=listen_for_key,
-#             args=(message_win, NotesGenerator(), stop_event, params.interval),
+#             args=...,
 #         )
 #         key_thread.start()
 

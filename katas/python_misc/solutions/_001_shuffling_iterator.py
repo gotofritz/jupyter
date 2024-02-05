@@ -9,9 +9,7 @@
 #         self.index = 0
 #         self.lock = ... 2.1
 #         if self.debug:
-#             self.items = ["--"] + items
-#         else:
-#             self.items = items
+#             ...
 #         self._reset()
 
 #     def __iter__(self):

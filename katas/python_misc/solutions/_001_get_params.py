@@ -18,16 +18,14 @@
 #     msg = "Enter timer duration in seconds: "
 #     # 2.3 curset equivalent of print
 #     # 2.4 curset equivalent of input()
-#     duration_input = stdscr.getstr(0, len(msg) + 1)
 #     # 2.5 wrap in error
 #     try:
-#         duration = int(duration_input)
-#         if not 0 <= duration <= 10:
-#             raise ValueError()
+#         duration = int(user_input)
+#         ...
+#             raise ...
 #         params_dict["duration"] = duration
 #     except ValueError:
 #         # 2.6 turn off curses and exits
-#         curses.endwin()
 #         print(
 #             "Invalid input for duration. Please enter a valid integer between 0 and 10."
 #         )
@@ -43,7 +41,7 @@
 
 
 # def main(stdscr):
-#     2.1 hide cursor
+#     2.11 hide cursor
 #     params = get_params(stdscr)
 #     # 2.2 stop curses so that you can print
 #     print(params)

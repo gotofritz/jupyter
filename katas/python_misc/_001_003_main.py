@@ -39,7 +39,7 @@
 #         metronome_win = ... 2.1
 
 #         metronome_thread = ... 2.2
-#         metronome_thread.start()
+#         ... start
 
 #         # cap the whole program length
 #         main_thread = threading.Thread(target=timer, args=(stop_event, params.duration))
