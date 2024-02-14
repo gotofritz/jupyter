@@ -1,3 +1,4 @@
+import multiprocessing
 import time
 
 
@@ -12,7 +13,8 @@ def cpu_bound(number):
 
 
 def find_sums(numbers):
-    ...
+    with multiprocessing.Pool() as executor:
+        executor.map(cpu_bound, numbers)
 
 
 3

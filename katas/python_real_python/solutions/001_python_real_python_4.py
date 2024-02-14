@@ -1,3 +1,5 @@
+# import requests
+# import multiprocessing
 import time
 
 sites = [
@@ -10,8 +12,7 @@ sites = [
 session = None
 
 
-def set_global_session():
-    ...
+def set_global_session(): ...
 
 
 2
@@ -19,14 +20,13 @@ def set_global_session():
 
 def download_site(url):
     ...
-    print(f"{name}:Read {len(response.content)} from {url}")
+    print(f"Process:{...}: Read {...)} from {url}")
 
 
 3
 
 
-def download_all_sites(sites):
-    ...
+def download_all_sites(sites): ...
 
 
 4

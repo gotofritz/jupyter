@@ -1,4 +1,5 @@
-import time
+# import multiprocessing
+# import time
 
 
 1
@@ -11,8 +12,7 @@ def cpu_bound(number):
 2
 
 
-def find_sums(numbers):
-    ...
+def find_sums(numbers): ...
 
 
 3
