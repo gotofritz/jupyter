@@ -1,7 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,jupyter
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode,jupyter
 
-#!! ERROR: jupyter is undefined. Use list command to see defined gitignore types !!#
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -192,3 +191,4 @@ poetry.toml
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,jupyter
 
 katas/_misc
+*db-journal
